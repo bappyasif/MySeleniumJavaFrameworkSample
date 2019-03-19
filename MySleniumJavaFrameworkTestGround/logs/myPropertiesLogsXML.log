@@ -1,0 +1,30 @@
+[INFO ] 2019-03-15 02:10:42.620 [main] SampleLog4jTest - Navigated To google home page.
+[INFO ] 2019-03-15 02:10:44.019 [main] SampleLog4jTest - Google Search was impleemented properly.
+[INFO ] 2019-03-15 02:10:44.731 [main] SampleLog4jTest - Test Successful
+[INFO ] 2019-03-15 02:12:22.409 [main] SampleLog4jTest - Navigated To google home page.
+[INFO ] 2019-03-15 02:12:23.728 [main] SampleLog4jTest - Google Search was impleemented properly.
+[INFO ] 2019-03-15 02:12:24.487 [main] SampleLog4jTest - Test Successful
+[INFO ] 2019-03-15 02:17:46.185 [main] SampleLog4jTest - Navigated To google home page.
+[INFO ] 2019-03-15 02:17:47.540 [main] SampleLog4jTest - Google Search was impleemented properly.
+[INFO ] 2019-03-15 02:17:48.366 [main] SampleLog4jTest - Test Successful
+[INFO ] 2019-03-15 02:23:25.835 [main] SampleLog4jTest - Browser Started
+[INFO ] 2019-03-15 02:27:13.840 [main] SampleLog4jTest - Browser Started
+[INFO ] 2019-03-15 02:27:16.259 [main] SampleLog4jTest - Navigated To google home page.
+[INFO ] 2019-03-15 02:27:18.111 [main] SampleLog4jTest - Google Search was impleemented properly.
+[INFO ] 2019-03-15 02:27:18.810 [main] SampleLog4jTest - Test Successful
+[INFO ] 2019-03-15 02:27:52.114 [main] SampleLog4jTest - Browser Started
+[INFO ] 2019-03-15 02:27:55.071 [main] SampleLog4jTest - Navigated To google home page.
+[INFO ] 2019-03-15 02:27:56.353 [main] SampleLog4jTest - Google Search was impleemented properly.
+[INFO ] 2019-03-15 02:27:57.060 [main] SampleLog4jTest - Test Successful
+[INFO ] 2019-03-15 02:28:59.000 [main] SampleLog4jTest - Browser Started
+[INFO ] 2019-03-15 02:29:01.110 [main] SampleLog4jTest - Navigated To google home page.
+[INFO ] 2019-03-15 02:29:02.487 [main] SampleLog4jTest - Google Search was impleemented properly.
+[INFO ] 2019-03-15 02:29:03.200 [main] SampleLog4jTest - Test Successful
+[INFO ] 2019-03-15 02:29:45.530 [main] SampleLog4jTest - Browser Started
+[INFO ] 2019-03-15 02:29:47.759 [main] SampleLog4jTest - Navigated To google home page.
+[INFO ] 2019-03-15 02:31:05.510 [main] SampleLog4jTest - Google Search was impleemented properly.
+[INFO ] 2019-03-15 02:31:06.249 [main] SampleLog4jTest - Test Successful
+[INFO ] 2019-03-15 02:37:41.567 [main] SampleLog4jTest - Browser Started
+[INFO ] 2019-03-15 02:37:44.233 [main] SampleLog4jTest - Navigated To google home page.
+[INFO ] 2019-03-15 02:37:45.571 [main] SampleLog4jTest - Google Search was impleemented properly.
+[INFO ] 2019-03-15 02:37:46.308 [main] SampleLog4jTest - Test Successful

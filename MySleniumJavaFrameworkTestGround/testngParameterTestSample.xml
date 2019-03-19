@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- If we use parameters in Suite level all the tests are going to have access of that parameter. -->
+<suite name="SuiteTest">
+  
+  <test thread-count="5" name="TestSample">
+	<!-- If we use parameter declaration within 'test' then it remains available within code scope. -->
+	<!-- If we commit it out our parameter value then fewer functions will run with specificity -->
+<!-- 	<parameter name="insertName" value="Selenium Automation"></parameter>    --> 
+	
+	<!--  Also need to include the Class tag as well -->
+	<classes>
+	
+	<class name="MyTestNGSample.TestNGParameterTestSample"></class> 
+	
+	</classes>
+	 
+  </test> <!-- TestSample -->
+</suite> <!-- SuiteTest -->

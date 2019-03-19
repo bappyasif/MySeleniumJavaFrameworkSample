@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+
+		<!-- Groups -->
+		<groups>
+			<!-- Meta Groups -->
+			<define name="Regression01">
+				<include name="smoke"></include>
+				<include name="regression"></include>
+			</define>
+			
+			<!-- name values are case sensitive -->
+			<run>
+				<!-- <include name="sanity"></include> -->
+				<!-- Group Example #01 calling the defined group name in 'define' tag -->
+				<include name="Regression01"></include>
+				<!-- Group Example #2 [RegEx] We can also use '*' signs after a common phrase to include them all. -->
+				<include name = "windowws.*"></include>
+				<!--  Group Example #3 Class Level Grouping example for all Tests Functions -->
+				<include name = "AllTests"></include>
+			</run>
+
+		</groups>
+
+
+		<classes>
+			<class name="MyTestNGSample.TestNGSampleGroupingTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

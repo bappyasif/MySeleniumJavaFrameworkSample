@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteTest">
+
+<listeners>
+<listener class-name = "MyTestNGListenersSample.TestNGListeners"></listener>
+</listeners>
+
+  <test thread-count="5" name="TestSample">
+    <classes>
+      <class name="MyTestNGListenersSample.TestNGLListenersTestSample"/>
+      <class name="MyTestNGListenersSample.TestNGLListenersTestSampleTwo"/>
+    </classes>
+  </test> <!-- TestSample -->
+</suite> <!-- SuiteTest -->

@@ -1,0 +1,16 @@
+[DEBUG] 2019-03-14 20:29:11.894 [main] SampleLog4jTest - This is a Debug Message
+[INFO ] 2019-03-14 20:29:11.894 [main] SampleLog4jTest - This is an information Message
+[ERROR] 2019-03-14 20:29:11.894 [main] SampleLog4jTest - This is an error Message
+[WARN ] 2019-03-14 20:29:11.894 [main] SampleLog4jTest - This is an Warning Message
+[FATAL] 2019-03-14 20:29:11.894 [main] SampleLog4jTest - This is a fatal Message
+[DEBUG] 2019-03-14 20:30:54.877 [main] SampleLog4jTest - This is a Debug Message
+[INFO ] 2019-03-14 20:30:54.877 [main] SampleLog4jTest - This is an information Message
+[ERROR] 2019-03-14 20:30:54.877 [main] SampleLog4jTest - This is an error Message
+[WARN ] 2019-03-14 20:30:54.877 [main] SampleLog4jTest - This is an Warning Message
+[FATAL] 2019-03-14 20:30:54.884 [main] SampleLog4jTest - This is a fatal Message
+[DEBUG] 2019-03-14 20:32:33.443 [main] SampleLog4jTest - This is a Debug Message
+[INFO ] 2019-03-14 20:32:33.443 [main] SampleLog4jTest - This is an information Message
+[ERROR] 2019-03-14 20:32:33.453 [main] SampleLog4jTest - This is an error Message
+[WARN ] 2019-03-14 20:32:33.453 [main] SampleLog4jTest - This is an Warning Message
+[FATAL] 2019-03-14 20:32:33.453 [main] SampleLog4jTest - This is a fatal Message
+[TRACE] 2019-03-14 20:32:33.453 [main] SampleLog4jTest - This is Trace Message!!!

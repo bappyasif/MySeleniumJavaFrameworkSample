@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="14557" started-at="2019-03-18T18:25:08Z" finished-at="2019-03-18T18:25:23Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="14557" started-at="2019-03-18T18:25:08Z" finished-at="2019-03-18T18:25:23Z">
+      <class name="MyTestNGSample.ASimpleSeleniumTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MyTestNGSample.ASimpleSeleniumTest@598067a5]" name="setUp" is-config="true" duration-ms="5534" started-at="2019-03-18T18:25:08Z" finished-at="2019-03-18T18:25:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testASimpleSelenium()[pri:0, instance:MyTestNGSample.ASimpleSeleniumTest@598067a5]" name="testASimpleSelenium" duration-ms="8368" started-at="2019-03-18T18:25:14Z" finished-at="2019-03-18T18:25:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testASimpleSelenium -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MyTestNGSample.ASimpleSeleniumTest@598067a5]" name="tearDown" is-config="true" duration-ms="631" started-at="2019-03-18T18:25:22Z" finished-at="2019-03-18T18:25:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- MyTestNGSample.ASimpleSeleniumTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

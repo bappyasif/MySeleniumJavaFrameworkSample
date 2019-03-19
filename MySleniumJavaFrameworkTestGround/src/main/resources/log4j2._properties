@@ -1,0 +1,28 @@
+// Please remember that log4j2.properties is the file name. We brought changes to that 
+// due to log4j2.xml demonstration, if you need to use that file just get rid of the _ from the name.
+
+name=PropertiesConfig
+property.filename = logs
+appenders = console, file
+
+appender.console.type = Console
+appender.console.name = STDOUT
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+ 
+appender.file.type = File
+appender.file.name = LOGFILE
+appender.file.fileName=${filename}/myPropertiesLogs.log
+appender.file.layout.type=PatternLayout
+appender.file.layout.pattern=[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+appender.file.append = true
+
+loggers=file
+logger.file.name=Log4jSample
+logger.file.level = off       // "trace" for including trace in logging, "drbug" is default mode which excludes "trace" and "off" excludes them all   
+logger.file.appenderRefs = file
+logger.file.appenderRef.file.ref = LOGFILE
+
+rootLogger.level = off    
+rootLogger.appenderRefs = stdout
+rootLogger.appenderRef.stdout.ref = STDOUT

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteTest" parallel="classes">
+	<test thread-count="5" name="TestSample" parallel="classes">
+		<classes>
+			<class name="AnotherAttemptInTestNGSample.MyTestNGSamepleTwo"></class>
+			<class
+				name="AnotherAttemptInTestNGSample.MyTestNGSamepleTwoSubOne">
+				<methods>
+					
+					<!-- <include name = "genralSearchDemoSampleTwo" ></include> -->
+					
+					<exclude name="genralSearchDemoSampleTwo"></exclude>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- TestSample -->
+</suite> <!-- SuiteTest -->
