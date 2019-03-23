@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [SuiteTest]">
-  <test thread-count="5" name="TestSample(failed)">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [SuiteTest]" parallel="tests">
+  <test thread-count="4" name="TestOnFirefoxBrowser(failed)" parallel="tests">
+    <parameter name="browserName" value="firefox"/>
     <classes>
-      <class name="MyTestNGSample.TestNGParameterTestSample">
+      <class name="MyTestNGSample.TestNGMultipleBrowserTestSample">
         <methods>
-          <include name="paramTest"/>
+          <include name="sampleTest"/>
+          <include name="launchBrowser"/>
+          <include name="terminateBrowser"/>
         </methods>
-      </class> <!-- MyTestNGSample.TestNGParameterTestSample -->
+      </class> <!-- MyTestNGSample.TestNGMultipleBrowserTestSample -->
     </classes>
-  </test> <!-- TestSample(failed) -->
+  </test> <!-- TestOnFirefoxBrowser(failed) -->
 </suite> <!-- Failed suite [SuiteTest] -->
