@@ -1,5 +1,7 @@
 package LiveTestProjectDay03;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.File;
 
 import org.apache.commons.io.FileUtils;
@@ -13,7 +15,7 @@ import com.aventstack.extentreports.model.ScreenCapture;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LiveTestErrorVarification {
+public class LiveTestErrorVerification {
 	
 	static WebDriver webDriver;
 	static String baseUrl = "http://live.guru99.com/";
@@ -47,6 +49,8 @@ public class LiveTestErrorVarification {
 		// Changing value to QTY to 1000 and clicking on Update button.
 		try {	
 			
+			// Clearing input space from previous quantity number.
+			webDriver.findElement(By.xpath(".//*[@id='shopping-cart-table']/tbody/tr/td[4]/input")).clear();
 			//webDriver.findElement(By.className("input-text qty")).sendKeys("1000");
 			webDriver.findElement(By.xpath("//input[@title='Qty']")).sendKeys("1000");
 			//webDriver.findElement(By.className("button btn-update")).click();
@@ -63,8 +67,9 @@ public class LiveTestErrorVarification {
 			ex.getStackTrace();
 		}
 		
-		// Clicking on Empty Cart button
+		// Clicking on Empty Cart button. A message "SHOPPING CART IS EMPTY" is shown on the screen. 
 		//webDriver.findElement(By.className("button2 btn-empty")).click();
+		// webDriver.findElement(By.xpath(".//*[@id='empty_cart_button']")).click();
 		webDriver.findElement(By.xpath("//span[contains(text(),'Empty Cart')]")).click();
 		System.out.println("Cart Is Now Empty");
 		
@@ -78,9 +83,21 @@ public class LiveTestErrorVarification {
 			FileUtils.copyFile(screenshotFile, new File(ecPngFile));
 			System.out.println("File's been moved to :" +ecPngFile);
 			
+			// verifying by checking in empty Cart message from the Empty Cart button. A message will be shown on screen
+			// later on console as well confirming that notion.
+			String noItemsStg = ("You have no items in your shopping cart.");
+		    String noItemsMsg = webDriver.findElement(By.xpath(".//*[@id='top']/body/div[1]/div/div[2]/div/div/div[2]/p[1]")).getText();
+		    System.out.println("You have no items msg = " + noItemsMsg);
+		    
+		    try {	    	
+	    	assertEquals(noItemsStg, noItemsMsg);
+		    } catch (Exception e) {
+		    	e.printStackTrace();	    	
+		    }	
+			
 			//cartMessage = webDriver.findElement(By.cssSelector("")).findElement(By.className("cart-empty")).getText();
-			cartMessage = webDriver.findElement(By.xpath("//span[contains(text(),'Cart')]")).getText();
-			System.out.println("Cart Message On Screen: " +cartMessage);
+			//cartMessage = webDriver.findElement(By.xpath("//span[contains(text(),'Cart')]")).getText();
+			//System.out.println("Cart Message On Screen: " +cartMessage);
 			
 		} catch (Exception ex) {
 			// TODO: handle exception
