@@ -1,5 +1,7 @@
 package LiveTestProjectDay07;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -74,7 +76,33 @@ public class LiveTestOnOrderSavedAsPDF {
 		for (String handle : webDriver.getWindowHandles()) {
 			webDriver.switchTo().window(handle);
 		}
-
+		
+		
+		// Verify the previously created order is displayed in 'RECENT ORDERS' table and status is Pending
+	    // note: RECENT ORDERS page is displayed immediately after customer/user has logged in
+		/**
+		 * 
+		 * This block of code would have worked if that test web-site 
+		 * had those options available in those expected areas. 
+		 * 
+		try {
+	        assertEquals("RECENT ORDERS", webDriver.findElement(By.cssSelector("h2")).getText());
+	        System.out.println("*** RECENT ORDERS is confirmed as the correct page to be in. ***");
+	      } catch (Error e) {
+	    	  System.out.println("*** RECENT ORDERS failed to get displayed on the page. ***");
+	    	  e.printStackTrace();	
+	      }
+	    
+	    try {
+	    	assertEquals("Pending", webDriver.findElement(By.cssSelector("em")).getText());
+	    	System.out.println("*** Status of Pending is correctly displayed for this recent order. ***");
+	      } catch (Error e) {
+	    	  System.out.println("*** Status of Pending failed to be confirmed for this recent order. ***");
+	    	  e.printStackTrace();	
+	      }		 
+		 
+		 */
+		
 		String orpgMessage = webDriver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/h1[1]")).getText();
 		System.out.println("Order Message Current Situation : " +orpgMessage);
 
@@ -99,6 +127,16 @@ public class LiveTestOnOrderSavedAsPDF {
 		
 		System.out.println("Test Completed...");
 		webDriver.quit();
+		
+	    // Step 8. Click 'Change...' link and a popup will be opened as 'Select a destination' , select 'Save as PDF' link.  
+	    // note:  There is no "Change...." link 
 
+
+	    // Step 9. Click on 'Save' button and save the file in some location.
+	    // note: unable to find this Save button
+  
+	    // Step 10.Verify Order is saved as PDF
+	    // unable to perform any verification because there is no option to save as PDF
+		
 	}
 }
