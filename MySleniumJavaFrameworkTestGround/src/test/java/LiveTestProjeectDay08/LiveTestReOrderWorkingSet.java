@@ -81,6 +81,10 @@ public class LiveTestReOrderWorkingSet {
 		webDriver.findElement(By.xpath("//a[@class='link-reorder']")).click();
 		Thread.sleep(2000);
 
+
+		// Getting Grand Total Price before ReOrder takes place and quantity gets updated.
+		String vPrice = webDriver.findElement(By.xpath(".//*[@id='shopping-cart-totals-table']/tfoot/tr/td[2]/strong/span")).getText();
+
 		// switching to new window. Even though it doesn't need this window switching but 
 		// still expert says its better this way when you're landing on a new URL.
 		for (String handle : webDriver.getWindowHandles()) {
@@ -104,7 +108,15 @@ public class LiveTestReOrderWorkingSet {
 			assertEquals("GRAND TOTAL", webDriver.findElement(By.xpath("//div[@class='cart-totals-wrapper']//tfoot//td[1]")).getText());
 			assertEquals(grandTotal, webDriver.findElement(By.xpath("//tfoot//td[2]")).getText());
 			String quantityNumber = webDriver.findElement(By.xpath("//span[@class='count']")).getText();
-			System.out.println("Grand Total has Changed: " +grandTotal + " For : " +quantityNumber  +" Products");
+			System.out.println("*** QTY  Set ***");
+			System.out.println("*** Cart Updated ***");
+			
+			if(vPrice == grandTotal) {
+				System.out.println("*** Grand Total price has not changed. ***");
+			} else {
+				System.out.println("Grand Total has Changed: " +grandTotal + " For : " +quantityNumber  +" Products");
+			}
+
 		} catch (Exception ex) {
 			// TODO: handle exception
 			System.out.println("Could Not Find Elememts");
@@ -131,7 +143,10 @@ public class LiveTestReOrderWorkingSet {
 			// TODO: handle exception
 			System.out.println("No dropdown element present");
 		}
-
+		
+		// Here premise is we are using previous created credentials to Re Order!! 
+		// Thats why we are not using Billing Address and Shipping Address information re entered!!! 
+		
 		// once found Clicking on radio button which says ship to this address.
 		webDriver.findElement(By.xpath("//label[@for='billing:use_for_shipping_yes']")).click();
 		System.out.println("Shipping Address Is Sleceted " +webDriver.findElement(By.xpath("//label[@for='billing:use_for_shipping_yes']")).isEnabled());
@@ -139,7 +154,7 @@ public class LiveTestReOrderWorkingSet {
 		// Clicking on Billing Information Continue button
 		webDriver.findElement(By.xpath("//div[@id='billing-buttons-container']//button[@title='Continue']")).click();
 		Thread.sleep(2000);
-		
+
 		// Checking whether Using billing address is selected as shipping Address. Then it will skip over to the next
 		// segment of checkout process.
 		boolean shippingCheckTry02 = webDriver.findElement(By.xpath("//label[@for='shipping:same_as_billing']")).isEnabled();
@@ -160,7 +175,7 @@ public class LiveTestReOrderWorkingSet {
 		// CLicking on Shipping segment Continue button to proceed on to the next.
 		if(shippingCheckTry02 != true) {
 			webDriver.findElement(By.xpath("//label[@for='shipping:same_as_billing']")).click();
-			
+
 		}
 
 		// Clicking Shipping Method Continue Button to proceed to payment segment.
@@ -191,11 +206,11 @@ public class LiveTestReOrderWorkingSet {
 			assertEquals("THANK YOU FOR YOUR PURCHASE!", webDriver.findElement(By.xpath("//h2[@class='sub-title']")).getText());
 			System.out.println("Order Confirmation:  " +webDriver.findElement(By.xpath("//h1[contains(text(),'Your order has been received.')]")).getText());
 			//System.out.println(webDriver.findElement(By.xpath("//h2[@class='sub-title']")).getText());
-			
+
 			// Noting Order number form the Success Checkout page.
 			String orderNumber = webDriver.findElement(By.xpath("//div[@class='main-container col1-layout']//p[1]")).getText();
 			System.out.println("Order Message : " +orderNumber);
-		
+
 		} catch (Exception ex) {
 			// TODO: handle exception
 			System.out.println("Your Order Details Page Not Found!!");
