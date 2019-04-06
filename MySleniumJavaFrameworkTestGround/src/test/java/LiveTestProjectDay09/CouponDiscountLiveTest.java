@@ -56,7 +56,7 @@ public class CouponDiscountLiveTest {
 		// noting grand total before discounted price gets successful. 
 		// Discounted price does not get any effect on grand total now...
 		String beforeDiscountGrandTotal = webDriver.findElement(By.xpath("//tfoot//td[2]")).getText();
-		System.out.println("Before Discount Code Applied : " +beforeDiscountGrandTotal);
+		System.out.println("Before Discount Code Applied : " +beforeDiscountGrandTotal.trim());
 		
 		// Entering Coupon Code "GURU50" to Discount codes and then apply
 		webDriver.findElement(By.xpath("//input[@id='coupon_code']")).clear();
@@ -72,9 +72,34 @@ public class CouponDiscountLiveTest {
 		// Now checking in Grand total section for confirmation of discount got applied.
 		String dicountCharge = webDriver.findElement(By.xpath("//tr[2]//td[2]")).getText();
 		assertEquals("-$25.00", dicountCharge);
-		System.out.println("Discount Code Takes Effect In Checkout Section: " +dicountCharge);
+		System.out.println("Discount Code Takes Effect In Checkout Section: " +dicountCharge.trim());
 		
-		webDriver.manage().window().fullscreen();
+		
+		//  Now all trimmed valued figure. And also what should site actually reflect in its calculation nevertheless.
+		System.out.println("Here Are Some New ways to extract data and manipulate when required..");
+		// this is the Generated discount amount displayed (e.g. $475.00)
+	    String vDiscountedAmtDisplayed = webDriver.findElement(By.xpath(".//*[@id='shopping-cart-totals-table']/tfoot/tr/td[2]/strong/span")).getText().trim();
+	    // It would have showed 475 iff system had it implemented it. NOw this will show total of 500.
+	    // System.out.println(vDiscountedAmtDisplayed); // thats why omitting this. 
+	    String trimmedGrandTotalValue = beforeDiscountGrandTotal.replaceAll("\\$", "").trim();
+		String trimmedDiscountAmountValue = dicountCharge.replaceAll("\\$", "").trim();
+		String trimmedExpectedGrandTotal = vDiscountedAmtDisplayed.replaceAll("\\$", "");
+		
+		// Remove the - negative sign from discounted amount.
+		String removedNegativeDiscountedAmount = trimmedDiscountAmountValue.replaceAll("\\-", "");
+		
+		// Parsing them into double data structured value.
+		double bdgTotalValue = Double.parseDouble(trimmedGrandTotalValue);
+		double discountedAmount = Double.parseDouble(removedNegativeDiscountedAmount);
+		double discountedTotal = Double.parseDouble(trimmedExpectedGrandTotal);
+		
+		// multiply the dSubTot by the GURU50 discount rate (GURU50 = 5% = 0.05) 
+	    double discountedAmt = (bdgTotalValue * .05);     // discountedAmt is the calculated discounted amount (e.g. $25.00)	
+	    double dDiscPrice = (bdgTotalValue - discountedAmt); // e.g. Discounted Price (e.g. $475) = Sub Total ($500.00) less the 5% discount amount ($25.00)
+	    System.out.println("Discounted Amount :" +discountedAmount);
+	    System.out.println("Discounted Price : " +dDiscPrice);
+	    
+	    webDriver.manage().window().fullscreen();
 		Thread.sleep(2000);
 		
 		// Now taking a snapshot
