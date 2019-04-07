@@ -1,5 +1,13 @@
 package LiveTestProjectDay10;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.Buffer;
+
+import org.glassfish.jersey.message.internal.MessageBodyProcessingException;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -70,11 +78,12 @@ public class TestOnBackendLoginAndCSVEmailAttachment {
 		}
 
 		// Now clicking on Export Drop-down and selecting CSV from options.
+		webDriver.findElement(By.xpath("//a[contains(text(),'Select Visible')]")).click();
 		webDriver.findElement(By.xpath("//select[@id='sales_order_grid_export']")).click();
 		new Select(webDriver.findElement(By.xpath("//select[@id='sales_order_grid_export']"))).selectByIndex(0);
 		webDriver.findElement(By.xpath("//span[contains(text(),'Export')]")).click();
 		System.out.println("Sales Orders File Been Exported As CSV Format");
-
+		Thread.sleep(12000);
 		// Here comes download able window handing part which can b done manually changing download settings 
 		// from Chrome settings to never to ask before downloading file enabled. Which is not recommended but using
 		// AutoIT will be redundant and excessive brute force.  Rather use wiget which is a easier way to handle 
@@ -84,7 +93,48 @@ public class TestOnBackendLoginAndCSVEmailAttachment {
 		// For the time being lets try sending a email which is doable not a big dieal. but then again 
 		// when you will need to have an attachment along with this email body then it gets surfaced with
 		// same problem of handling system window which I have not learned how to do it, as of yet!!
-
+		
+		// Downloads file into file system
+		String filePath = System.getProperty("user.home") +"\\Downloads\\CSVOrders.csv";
+		System.out.println("File Saved : " +filePath);
+		// Will be fetching another .java file where Email Utilities are done.
+		try {
+			// EMail Utils
+		} catch (MessageBodyProcessingException e) {
+			// TODO: handle exception
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		// Reading downloaded file and display Heading and every Order details in the console windows
+		// Will be accessing file that has been created earlier and saved in to file System.
+		File csvFile = new File(filePath);
+		
+		try {
+			// Creating a File Reader object to read from files.
+			FileReader fReader = new FileReader(csvFile);
+			// Creating Buffer reader object to put them into buffer stream before processing them in Console.
+			BufferedReader buffReader = new BufferedReader(fReader);
+			// Considering per Line processing
+			String eachLine = buffReader.readLine();
+			// Until EOF
+			while(eachLine != null) {
+				// Console Output
+				System.out.println(eachLine);
+				// Reading next line and so on until EOF.
+				eachLine = buffReader.readLine();
+			}
+			// Closing file-Readers after work
+			fReader.close();
+			buffReader.close();
+		} catch (FileNotFoundException ex) {
+			// TODO: handle exception
+			ex.getStackTrace();
+		} catch (IOException e) {
+			// TODO: handle exception
+			e.getStackTrace();
+		}	
+		
 		System.out.println("Test Completed...");
 		webDriver.quit();
 
