@@ -99,7 +99,7 @@ public class TestOnBackendLoginAndCSVEmailAttachment {
 		System.out.println("File Saved : " +filePath);
 		// Will be fetching another .java file where Email Utilities are done.
 		try {
-			// EMail Utils
+			SimpleEmailSendingUtil.SendingEmail();
 		} catch (MessageBodyProcessingException e) {
 			// TODO: handle exception
 		} catch (Exception e) {

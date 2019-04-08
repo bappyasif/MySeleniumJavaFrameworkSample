@@ -2,6 +2,8 @@ package LiveTestProjectDay01;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,10 +42,17 @@ public class LiveTestWorkingSetTry {
 		menuString = webDriver.getTitle();
 		System.out.println("Title of This page :" +menuString);
 		
-		Select drpdwnSelection = new Select(webDriver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]"
-				+ "/div[2]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/select[1]")));
+		WebElement drpdwnElement = webDriver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]"
+				+ "/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/select[1]"));
 		
-		drpdwnSelection.selectByVisibleText("Name");
+		
+		Select drpdwnSelection = new Select(drpdwnElement);
+		//drpdwnSelection.selectByValue("Name");
+		
+		//Select drpdwnSelection = new Select(webDriver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]"
+		//		+ "/div[2]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/select[1]")));
+		
+		//drpdwnSelection.selectByVisibleText("Name");
 		// Code Works up until now. It just need to verify whether its really being selected or not. 
 		// btw, which it does just fine.
 		
@@ -60,7 +69,17 @@ public class LiveTestWorkingSetTry {
 		// was trying to assert the condition for availability of tag.
 		//assertEquals("Name", drpdwnSelection.getOptions().contains("name"));
 		
-		System.out.println(sortbySelection);
+		drpdwnSelection.selectByIndex(2);
+		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		//sortbySelection = drpdwnElement.getAttribute("Price").toString();
+		//WebElement sortedBy = drpdwnSelection.getFirstSelectedOption();
+		
+		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		//drpdwnSelection.selectByIndex(1);
+		
+		//String elementOptions = drpdwnSelection.getFirstSelectedOption().getText();
+		//sortbySelection = elementOptions.toString();
+		//System.out.println(sortedBy.getText());
 		
 		System.out.println("Test Completed");
 		
