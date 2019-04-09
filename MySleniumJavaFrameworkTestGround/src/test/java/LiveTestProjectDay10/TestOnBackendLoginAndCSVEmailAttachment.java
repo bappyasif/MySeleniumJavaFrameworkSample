@@ -22,6 +22,9 @@ public class TestOnBackendLoginAndCSVEmailAttachment {
 	static String baseUrl = "http://live.guru99.com/index.php/backendlogin/";
 	static String userID = "user01";
 	static String userPass = "guru99com";
+	
+	static final String sendFrom = "asifuzzamanbappy@gmail.com";
+	static final String sendTo = "asifuzzamanbappy@gmail.com";
 
 
 	public static void main(String[] args) {
@@ -99,7 +102,8 @@ public class TestOnBackendLoginAndCSVEmailAttachment {
 		System.out.println("File Saved : " +filePath);
 		// Will be fetching another .java file where Email Utilities are done.
 		try {
-			SimpleEmailSendingUtil.SendingEmail();
+			//SimpleEmailSendingUtil.SendingEmail();
+			SimpleGmailEmailSenderWithAttachmentUtil.SendingEmailWithAttachment(sendFrom, sendTo);
 		} catch (MessageBodyProcessingException e) {
 			// TODO: handle exception
 		} catch (Exception e) {
