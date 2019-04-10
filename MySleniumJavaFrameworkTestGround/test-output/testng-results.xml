@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12693" started-at="2019-03-23T19:39:46Z" finished-at="2019-03-23T19:39:59Z">
+  <suite name="Default suite" duration-ms="65602" started-at="2019-04-10T20:08:01Z" finished-at="2019-04-10T20:09:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12693" started-at="2019-03-23T19:39:46Z" finished-at="2019-03-23T19:39:59Z">
-      <class name="MyTestNGSample.ASimpleSeleniumTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:MyTestNGSample.ASimpleSeleniumTest@3b0143d3]" name="setUp" is-config="true" duration-ms="3792" started-at="2019-03-23T19:39:46Z" finished-at="2019-03-23T19:39:50Z">
+    <test name="Default test" duration-ms="65602" started-at="2019-04-10T20:08:01Z" finished-at="2019-04-10T20:09:06Z">
+      <class name="LiveTestProjectDay10.MySolutionTestNGTestCase10">
+        <test-method status="PASS" signature="launchingBrowser()[pri:0, instance:LiveTestProjectDay10.MySolutionTestNGTestCase10@1d16f93d]" name="launchingBrowser" is-config="true" duration-ms="3721" started-at="2019-04-10T20:08:01Z" finished-at="2019-04-10T20:08:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testASimpleSelenium()[pri:0, instance:MyTestNGSample.ASimpleSeleniumTest@3b0143d3]" name="testASimpleSelenium" duration-ms="8220" started-at="2019-03-23T19:39:50Z" finished-at="2019-03-23T19:39:58Z">
+        </test-method> <!-- launchingBrowser -->
+        <test-method status="PASS" signature="CommencingTest10Day10()[pri:0, instance:LiveTestProjectDay10.MySolutionTestNGTestCase10@1d16f93d]" name="CommencingTest10Day10" duration-ms="61106" started-at="2019-04-10T20:08:04Z" finished-at="2019-04-10T20:09:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testASimpleSelenium -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:MyTestNGSample.ASimpleSeleniumTest@3b0143d3]" name="tearDown" is-config="true" duration-ms="659" started-at="2019-03-23T19:39:58Z" finished-at="2019-03-23T19:39:59Z">
+        </test-method> <!-- CommencingTest10Day10 -->
+        <test-method status="PASS" signature="terminatingBrowser()[pri:0, instance:LiveTestProjectDay10.MySolutionTestNGTestCase10@1d16f93d]" name="terminatingBrowser" is-config="true" duration-ms="670" started-at="2019-04-10T20:09:05Z" finished-at="2019-04-10T20:09:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- MyTestNGSample.ASimpleSeleniumTest -->
+        </test-method> <!-- terminatingBrowser -->
+      </class> <!-- LiveTestProjectDay10.MySolutionTestNGTestCase10 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -12,27 +13,29 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LiveTestPurchaseProducts {
+public class MySolutionTestNGTestCase06 {
 
 	static WebDriver webDriver;
 	static String baseUrl = "http://live.guru99.com/";
-	static String loginEmail = "asifuzzamanbappy+02@gmail.com";
+	static String loginEmail = "asifuzzamanbappy+04@gmail.com";
 	static String loginPassword = "testtest";
 
-	public static void main(String[] args) throws InterruptedException, IOException {
-
-		CommencingTestProductsPurchase();
-	}
-
-	public static void CommencingTestProductsPurchase() throws InterruptedException, IOException {
-
-		// preparing webDriver for this task.
+	@BeforeTest
+	public void launchingBrowser() {
+		// Setting up environment here.
 		WebDriverManager.chromedriver().setup();
 		webDriver = new ChromeDriver();
+		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	}
 
+	@Test
+	public void CommencingTest06Day06() throws IOException, InterruptedException {
 		// Navigating to Live Test Site
 		webDriver.get(baseUrl);
 		System.out.println("Landed on LiveTest Page");
@@ -206,38 +209,6 @@ public class LiveTestPurchaseProducts {
 			System.out.println("No dropdown element present");
 		}
 		Thread.sleep(2000);
-		
-		/**
-		 * 
-		 webDriver.findElement(By.id("shipping:firstname")).clear();
-		webDriver.findElement(By.id("shipping:firstname")).sendKeys("Asifuzzaman"); 
-		webDriver.findElement(By.id("shipping:lastname")).clear();
-		webDriver.findElement(By.id("shipping:lastname")).sendKeys("Bappy"); 
-		webDriver.findElement(By.id("shipping:company")).clear(); 
-
-		webDriver.findElement(By.id("shipping:street1")).clear();
-		webDriver.findElement(By.id("shipping:street1")).sendKeys("House#Shipping11, Road#02, Shyamoli, Adabar"); 
-		webDriver.findElement(By.id("shipping:street2")).clear();
-		// shipping country must be selected first from dropdown
-		new Select(webDriver.findElement(By.xpath("//select[@id='shipping:country_id']"))).selectByIndex(19); 
-		// once Australia is selected, then the region and city becomes simply a text input, instead of dropdown
-		webDriver.findElement(By.id("shipping:region")).clear();
-		webDriver.findElement(By.id("shipping:region")).sendKeys("Shyamoli"); 
-		webDriver.findElement(By.id("shipping:city")).clear();
-		webDriver.findElement(By.id("shipping:city")).sendKeys("Dhaka"); 
-		webDriver.findElement(By.id("shipping:postcode")).clear();
-		webDriver.findElement(By.id("shipping:postcode")).sendKeys("1207"); 
-		webDriver.findElement(By.id("shipping:telephone")).clear();
-		webDriver.findElement(By.id("shipping:telephone")).sendKeys("+8801915645093");
-		Thread.sleep(2000);
-		 */
-		
-		//webDriver.findElement(By.xpath("//div[@id='shipping-method-buttons-container']//button[@type='button']//span//span[contains(text(),'Continue')]")).click();
-		//webDriver.findElement(By.xpath("//label[@for='billing:use_for_shipping_yes']")).click();
-		// Something is not right here!! it keep saying its not finding element!! Not intractable.. Check tomorrow.
-
-
-		//webDriver.findElement(By.xpath(".//*[@id='shipping-buttons-container']/button")).click();
 
 		// switching to new window. Even though it doesn't need this window switching but 
 		// still expert says its better this way
@@ -248,12 +219,12 @@ public class LiveTestPurchaseProducts {
 		// In Shipping Method, Click Continue 
 		webDriver.findElement(By.xpath(".//*[@id='shipping-method-buttons-container']/button")).click();
 		Thread.sleep(2000);
-		
+
 		// In Payment Information select 'Check/Money Order' radio button. Click Continue
 		//webDriver.findElement(By.xpath("//label[@for='p_method_checkmo']")).click();
 		webDriver.findElement(By.xpath("//input[@title='Check / Money order']")).click();
 		Thread.sleep(2000);
-		
+
 		webDriver.findElement(By.xpath("//div[@id='payment-buttons-container']//button[@type='button']")).click();
 
 		//webDriver.findElement(By.xpath("//button[@title='Place Order']")).click();
@@ -285,8 +256,10 @@ public class LiveTestPurchaseProducts {
 		String orderNumber = webDriver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/p[1]/a[1]")).getText();
 		System.out.println("Order number : " +orderNumber);
 
-		Thread.sleep(2000);
-		
+	}
+
+	@AfterTest
+	public void terminatingBrowser() {
 		System.out.println("Test Completed...");
 		webDriver.quit();
 	}
