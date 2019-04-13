@@ -196,7 +196,7 @@ public class LiveTestOnProductReview {
 		String reviewedMessage = webDriver.findElement(By.xpath("//dd[@class='tab-container last current']//dt[1]")).getText();
 		System.out.println("Bappy's Review Of Sony Xperia : " +reviewedMessage);
 
-		// New Code fir scrolling
+		// New Code for scrolling
 		WebElement scrolUntil = webDriver.findElement(By.xpath("//dd[@class='tab-container last current']//dd[1]"));
 		int windowSize = scrolUntil.getLocation().getY();
 		JavascriptExecutor windowScroller = (JavascriptExecutor)webDriver;
