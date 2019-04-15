@@ -1,5 +1,6 @@
 package ErrorHandlingExceptionSample;
 
+import java.util.Calendar;
 import java.util.Date; 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,6 +12,7 @@ public class ExcptionHandlingTestSample {
 	
 		anotherDateParsingFucntion();
 		myDateParsingIsuue();
+		MyNewDateParser();
 		// Example #02 where you simply throws exception in the function naming and not affect the code
 		// body rather handling it outside where its been used, here in this case it's calling from main.
 		
@@ -81,6 +83,29 @@ public class ExcptionHandlingTestSample {
 		java.util.Date dateFormat = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss aa").parse(dateStamp);
 		//java.util.Date newDateFormatDisplay = dateFormat.parse(dateStamp);
 		System.out.println(dateFormat);
+		
+	}
+	
+	public static void MyNewDateParser() throws ParseException {
+		
+		Calendar myCalendar = Calendar.getInstance();
+		
+		String dateStamp = "May 4, 2017 7:41:10 AM";
+		
+		SimpleDateFormat dateformatter = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss aa");
+		
+		Date checkDate = dateformatter.parse(dateStamp);
+		
+		myCalendar.setTime(checkDate);
+		
+		int checkYear = myCalendar.get(Calendar.YEAR);
+		System.out.println("Year Extracted : " +checkYear);
+		
+		int checkMonth = myCalendar.get(Calendar.MONTH);
+		System.out.println("Month Extracted : " +checkMonth);
+		
+		int checkDay = myCalendar.get(Calendar.DAY_OF_MONTH);
+		System.out.println("Day Extracted : " +checkDay );
 		
 	}
 	

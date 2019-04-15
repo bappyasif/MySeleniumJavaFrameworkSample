@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -73,7 +74,7 @@ public class LiveTestOnSortFucntionality {
 		// Sorting Date Column from asc --> desc and then desc --> asc order respectively.
 		webDriver.findElement(By.xpath("//span[contains(text(),'Invoice Date')]")).click();
 		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		String checkDescStamp = webDriver.findElement(By.xpath("//td[contains(text(),'Aug 23, 2014 12:25:57 AM')]")).getText();
+		String checkDescStamp = webDriver.findElement(By.xpath("//td[contains(text(),'Aug 23, 2014 12:25:57 AM')]")).getText().toString().trim();
 		System.out.println("Earliest Entry Date Stamp : " +checkDescStamp);
 		Thread.sleep(2000);
 		
@@ -85,20 +86,34 @@ public class LiveTestOnSortFucntionality {
 		
 		webDriver.findElement(By.xpath("//span[contains(text(),'Invoice Date')]")).click();
 		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		String checkAscStatmp = webDriver.findElement(By.xpath("//td[contains(text(),'May 4, 2017 7:41:10 AM')]")).getText(); 
+		String checkAscStatmp = webDriver.findElement(By.xpath("//td[contains(text(),'May 4, 2017 7:41:10 AM')]")).getText().toLowerCase().toString().trim(); 
 		System.out.println("Latest Entry Date Stamp : " +checkAscStatmp);
 		Thread.sleep(2000);
 		
 		//checkAscStatmp.compareTo(checkDescStamp);
 		//DateFormat dateChecker = DateFormat.getInstance();
 		//String checkAscDate = dateChecker.format(checkAscStatmp);
-		//SimpleDateFormat dateformatter = new SimpleDateFormat("MM, dd, yyyy HH:mm:ss aaa", Locale.US);
-		//Date ascDate = dateformatter.parse(checkAscStatmp);
-		//System.out.println("Parsed ASC Time Stamp :" +ascDate);
-		//Date descDate = dateformatter.parse(checkDescStamp);
-		//System.out.println("Parsed ASC Time Stamp :" +descDate);
+		Calendar calendar = Calendar.getInstance();
+		
+		SimpleDateFormat dateformatter = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss aa");
+		
+		Date ascDate = dateformatter.parse(checkAscStatmp);
+		calendar.setTime(ascDate);
+		int ascYear = calendar.get(Calendar.YEAR);
+		System.out.println("Parsed ASC Time Stamp For Year :" +ascYear);
+		
+		Date descDate = dateformatter.parse(checkDescStamp);
+		calendar.setTime(descDate);
+		int descYear = calendar.get(Calendar.YEAR);
+		System.out.println("Parsed DESC Time Stamp For Year :" +descYear);
 		
 		//DateTimeFormatter df = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss XM");
+		
+		if (ascYear > descYear) {
+			System.out.println("Sorting Works Just Fine");
+		} else {
+			System.out.println("Something's Wrong!!!");
+		}
 		
 		//System.out.println(ascDate.compareTo(descDate));
 		//System.out.println(checkAscStatmp.compareTo(checkDescStamp));
