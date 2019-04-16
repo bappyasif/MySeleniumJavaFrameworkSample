@@ -148,7 +148,7 @@ public class LiveTestOnInvoicePrinting {
 		//String filePath = System.getProperty("user.home") +"\\savedFile"+".pdf";
 		System.out.println("File Saved : " +opFile);
 		
-		// Verifying Download was successful
+		// Verifying Download was successful by reading text from download file.
 		PDDocument document = PDDocument.load(new File("C:\\Users\\BappY\\Downloads\\savedFile.pdf"));
 		if(!document.isEncrypted()) {
 			PDFTextStripper stripper = new PDFTextStripper();
