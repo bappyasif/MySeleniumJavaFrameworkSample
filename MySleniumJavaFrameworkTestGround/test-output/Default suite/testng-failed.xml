@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MyTestNGSample.TestNGMultipleBrowserTestSample">
+      <class name="DemoBankProjectLiveTestDay04.LiveTestOnDataParameterizationUsingTestNG">
         <methods>
-          <include name="sampleTest"/>
-          <include name="launchBrowser"/>
-          <include name="terminateBrowser"/>
+          <include name="launchingBrowser"/>
+          <include name="terminatingBrowser"/>
+          <include name="ComencingIterationThroughRows"/>
+          <include name="CommencingTestOnDataParameterization"/>
         </methods>
-      </class> <!-- MyTestNGSample.TestNGMultipleBrowserTestSample -->
+      </class> <!-- DemoBankProjectLiveTestDay04.LiveTestOnDataParameterizationUsingTestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

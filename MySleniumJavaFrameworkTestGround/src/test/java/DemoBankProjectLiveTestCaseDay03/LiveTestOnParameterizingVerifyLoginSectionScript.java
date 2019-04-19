@@ -1,4 +1,4 @@
-package DemoBankProjectLiveTestDay03;
+package DemoBankProjectLiveTestCaseDay03;
 
 import java.io.IOException;
 

@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="MyTestNGListenersSample.TestNGListeners"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MyTestNGListenersSample.TestNGLListenersTestSampleTwo">
+      <class name="DemoBankProjectLiveTestDay04.LiveTestOnDataParameterizationUsingTestNG">
         <methods>
-          <include name="testSampleTwoCopyTwo"/>
+          <include name="launchingBrowser"/>
+          <include name="terminatingBrowser"/>
+          <include name="ComencingIterationThroughRows"/>
+          <include name="CommencingTestOnDataParameterization"/>
         </methods>
-      </class> <!-- MyTestNGListenersSample.TestNGLListenersTestSampleTwo -->
-      <class name="MyTestNGListenersSample.TestNGLListenersTestSample">
-        <methods>
-          <include name="testThree"/>
-        </methods>
-      </class> <!-- MyTestNGListenersSample.TestNGLListenersTestSample -->
+      </class> <!-- DemoBankProjectLiveTestDay04.LiveTestOnDataParameterizationUsingTestNG -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
