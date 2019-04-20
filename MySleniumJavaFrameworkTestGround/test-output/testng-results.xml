@@ -1,85 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29476" started-at="2019-04-20T19:37:00Z" finished-at="2019-04-20T19:37:30Z">
+  <suite name="Default suite" duration-ms="39197" started-at="2019-04-20T19:56:05Z" finished-at="2019-04-20T19:56:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29476" started-at="2019-04-20T19:37:00Z" finished-at="2019-04-20T19:37:30Z">
-      <class name="DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification">
-        <test-method status="PASS" signature="launchingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification@369f73a2]" name="launchingBrowser" is-config="true" duration-ms="9281" started-at="2019-04-20T19:37:00Z" finished-at="2019-04-20T19:37:09Z">
+    <test name="Default test" duration-ms="39197" started-at="2019-04-20T19:56:05Z" finished-at="2019-04-20T19:56:44Z">
+      <class name="DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG">
+        <test-method status="PASS" signature="launchingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG@731a74c]" name="launchingBrowser" is-config="true" duration-ms="8988" started-at="2019-04-20T19:56:05Z" finished-at="2019-04-20T19:56:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchingBrowser -->
-        <test-method status="PASS" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification@369f73a2]" name="setData" duration-ms="5123" started-at="2019-04-20T19:37:09Z" data-provider="getData" finished-at="2019-04-20T19:37:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mngr190242]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hArEdAq]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="CommencingTestOnDataParameterization()[pri:0, instance:DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG@731a74c]" name="CommencingTestOnDataParameterization" is-config="true" duration-ms="593" started-at="2019-04-20T19:56:14Z" finished-at="2019-04-20T19:56:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="PASS" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification@369f73a2]" name="setData" duration-ms="4932" started-at="2019-04-20T19:37:15Z" data-provider="getData" finished-at="2019-04-20T19:37:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mngr1136]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hArEdAq]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- CommencingTestOnDataParameterization -->
+        <test-method status="PASS" signature="ComencingIterationThroughRows()[pri:0, instance:DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG@731a74c]" name="ComencingIterationThroughRows" duration-ms="28872" started-at="2019-04-20T19:56:14Z" finished-at="2019-04-20T19:56:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="PASS" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification@369f73a2]" name="setData" duration-ms="4828" started-at="2019-04-20T19:37:20Z" data-provider="getData" finished-at="2019-04-20T19:37:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mngr190242]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hBr0dAq]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="PASS" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification@369f73a2]" name="setData" duration-ms="4608" started-at="2019-04-20T19:37:24Z" data-provider="getData" finished-at="2019-04-20T19:37:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mngr1137]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hBr0d0q]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="PASS" signature="terminatingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification@369f73a2]" name="terminatingBrowser" is-config="true" duration-ms="673" started-at="2019-04-20T19:37:29Z" finished-at="2019-04-20T19:37:30Z">
+        </test-method> <!-- ComencingIterationThroughRows -->
+        <test-method status="PASS" signature="terminatingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG@731a74c]" name="terminatingBrowser" is-config="true" duration-ms="716" started-at="2019-04-20T19:56:43Z" finished-at="2019-04-20T19:56:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminatingBrowser -->
-      </class> <!-- DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification -->
+      </class> <!-- DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -36,6 +36,7 @@ public class LiveTestOnDynamicLoginTextVerification {
 
 		System.out.println("ID Used: " +userID);
 		System.out.println("Password Used: " +userPassword);
+		System.out.println("Commencing Login :");
 		CommencingLogin(userID,userPassword);
 	}
 

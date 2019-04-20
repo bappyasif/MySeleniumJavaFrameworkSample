@@ -132,7 +132,7 @@ public class LiveTestOnDataParameterizationUsingTestNG {
 			Alert alert = webDriver.switchTo().alert();
 			String alertMessage = alert.getText().toString();
 			alert.accept();
-			System.out.println("Alert Box Message Is:  " +alertMessage);
+			System.out.println("Message Shown In Alert Box :   " +alertMessage);
 
 		} finally {
 			
