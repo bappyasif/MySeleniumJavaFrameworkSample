@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -125,6 +126,13 @@ public class LiveTestOnDataParameterizationUsingTestNG {
 
 			System.out.println("Check Console For Clarification");
 			ex.getStackTrace();
+			
+			// Alert Box Message Handling code, which was missing from earlier solution.
+			// It seems much more convenient and easy to execute. 
+			Alert alert = webDriver.switchTo().alert();
+			String alertMessage = alert.getText().toString();
+			alert.accept();
+			System.out.println("Alert Box Message Is:  " +alertMessage);
 
 		} finally {
 			

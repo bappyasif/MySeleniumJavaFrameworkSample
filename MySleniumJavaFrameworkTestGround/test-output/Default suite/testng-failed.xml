@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DemoBankProjectLiveTestDay04.LiveTestOnDataParameterizationUsingTestNG">
+      <class name="DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification">
         <methods>
           <include name="launchingBrowser"/>
+          <include name="setData" invocation-numbers="2 3"/>
           <include name="terminatingBrowser"/>
-          <include name="ComencingIterationThroughRows"/>
-          <include name="CommencingTestOnDataParameterization"/>
         </methods>
-      </class> <!-- DemoBankProjectLiveTestDay04.LiveTestOnDataParameterizationUsingTestNG -->
+      </class> <!-- DemoBankProjectLiveTestCaseDay05.LiveTestOnDynamicLoginTextVerification -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
