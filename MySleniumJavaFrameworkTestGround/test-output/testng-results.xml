@@ -1,29 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39197" started-at="2019-04-20T19:56:05Z" finished-at="2019-04-20T19:56:44Z">
+  <suite name="Default suite" duration-ms="35100" started-at="2019-04-21T18:36:54Z" finished-at="2019-04-21T18:37:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39197" started-at="2019-04-20T19:56:05Z" finished-at="2019-04-20T19:56:44Z">
-      <class name="DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG">
-        <test-method status="PASS" signature="launchingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG@731a74c]" name="launchingBrowser" is-config="true" duration-ms="8988" started-at="2019-04-20T19:56:05Z" finished-at="2019-04-20T19:56:14Z">
+    <test name="Default test" duration-ms="35100" started-at="2019-04-21T18:36:54Z" finished-at="2019-04-21T18:37:29Z">
+      <class name="DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG">
+        <test-method status="PASS" signature="launchingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="launchingBrowser" is-config="true" duration-ms="9550" started-at="2019-04-21T18:36:54Z" finished-at="2019-04-21T18:37:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchingBrowser -->
-        <test-method status="PASS" signature="CommencingTestOnDataParameterization()[pri:0, instance:DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG@731a74c]" name="CommencingTestOnDataParameterization" is-config="true" duration-ms="593" started-at="2019-04-20T19:56:14Z" finished-at="2019-04-20T19:56:14Z">
+        <test-method status="PASS" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="setData" duration-ms="9248" started-at="2019-04-21T18:37:03Z" data-provider="getData" finished-at="2019-04-21T18:37:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mngr190242]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hArEdAq]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CommencingTestOnDataParameterization -->
-        <test-method status="PASS" signature="ComencingIterationThroughRows()[pri:0, instance:DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG@731a74c]" name="ComencingIterationThroughRows" duration-ms="28872" started-at="2019-04-20T19:56:14Z" finished-at="2019-04-20T19:56:43Z">
+        </test-method> <!-- setData -->
+        <test-method status="PASS" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="setData" duration-ms="5113" started-at="2019-04-21T18:37:12Z" data-provider="getData" finished-at="2019-04-21T18:37:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mngr1136]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hArEdAq]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ComencingIterationThroughRows -->
-        <test-method status="PASS" signature="terminatingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG@731a74c]" name="terminatingBrowser" is-config="true" duration-ms="716" started-at="2019-04-20T19:56:43Z" finished-at="2019-04-20T19:56:44Z">
+        </test-method> <!-- setData -->
+        <test-method status="PASS" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="setData" duration-ms="5179" started-at="2019-04-21T18:37:18Z" data-provider="getData" finished-at="2019-04-21T18:37:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mngr190242]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hBr0dAq]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setData -->
+        <test-method status="PASS" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="setData" duration-ms="5284" started-at="2019-04-21T18:37:23Z" data-provider="getData" finished-at="2019-04-21T18:37:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mngr1137]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hBr0d0q]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setData -->
+        <test-method status="PASS" signature="terminatingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="terminatingBrowser" is-config="true" duration-ms="683" started-at="2019-04-21T18:37:28Z" finished-at="2019-04-21T18:37:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminatingBrowser -->
-      </class> <!-- DemoBankProjectLiveTestCaseDay04.LiveTestOnDataParameterizationUsingTestNG -->
+      </class> <!-- DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
