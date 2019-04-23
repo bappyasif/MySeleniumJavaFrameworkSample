@@ -1,5 +1,7 @@
 package DemoBankProjectLiveTestCase08;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -94,8 +96,10 @@ public class LiveTestOnCreaingNewCustomerAccount {
 			}
 			System.out.println("New Customer Account Created");
 
+			String expectedMesssage = "Customer Registered Successfully!!!";
 			String accountConfirmation = webDriver.findElement(By.xpath("//p[@class='heading3']")).getText().toString();
 			System.out.println("Message Found : " +accountConfirmation);
+			assertEquals(accountConfirmation, expectedMesssage);
 			
 			Thread.sleep(2000);
 
@@ -175,7 +179,7 @@ public class LiveTestOnCreaingNewCustomerAccount {
 		webDriver.navigate().refresh();
 		Thread.sleep(2000);
 		
-		// Scrolling Until Continue Button
+		// Scrolling Page Until EOF
 		((JavascriptExecutor) webDriver)
 	     .executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		
