@@ -1,4 +1,4 @@
-package DemoBankProjectLiveTeestCase09;
+package DemoBankProjectLiveTestCase09;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
