@@ -1,9 +1,11 @@
-package DemoBankProjectLiveTestCase08;
+package DemoBankProjectLiveTestCaseDay09;
 
-import static org.testng.Assert.assertEquals;
-
+import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -13,23 +15,30 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import com.asprise.ocr.Ocr;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LiveTestOnCreaingNewCustomerAccount {
+// Before running this test case firstly, run testCase08 from this series with a different email test account.
+// get cutomerID from there and use it  in here as a requirement.
+public class LiveTestOnVerifyNewAccountCreated {
 
-	static WebDriver webDriver;
+	static WebDriver webDriver;	
 	static String baseUrl = "http://www.demo.guru99.com/V4/";
-	static final String userID = "mngr190242"; 
+	static final String userID = "mngr190242";
 	static String userPassword = "hCrEd^8";
-	public static String ExtractedID;
-
+	static String filePath = "E:\\eclipse\\LiveTestCodeSamples\\Bank Demo\\NewCustomerAccountCreationScreenShot.png";
+	static String customerID = "32144";
+	static String extractID;
+	static String initialDeposit = "99999992";
+	//static String accountID = "59371";  // just in case if you need this data to manipulate in future. CustID : 5779.
+	// Test Data 2: cutomerID : 32144  ; accountID : 59372
 	public static void main(String[] args) {
-
+		
 		try {
-			
-			CommencingTestOnNewCustomerAccountCreation();
-			
+			CommencingTestOnAccountCreationVerification();
 		} catch (Exception ex) {
 			// TODO: handle exception
 			ex.getStackTrace();
@@ -39,78 +48,62 @@ public class LiveTestOnCreaingNewCustomerAccount {
 			webDriver.quit();
 		}
 		
-
 	}
-
-
-	public static void CommencingTestOnNewCustomerAccountCreation() throws InterruptedException {
+	
+	
+	public static void CommencingTestOnAccountCreationVerification() throws InterruptedException, IOException {
 
 		// Getting webDriver ready for this.
 		WebDriverManager.chromedriver().setup();
 		webDriver = new ChromeDriver();
 
 		CommencingLogin();
-		CreatingNewCustomerAccount();
-
+		CreatingNewBankingAccount();
 	}
 
-	public static void CreatingNewCustomerAccount() throws InterruptedException {
+	public static void CreatingNewBankingAccount() throws InterruptedException, IOException {
+		// getting new customer ID from earlier Test Case
+		//DemoBankProjectLiveTestCase08.LiveTestOnCreaingNewCustomerAccount.CommencingTestOnNewCustomerAccountCreation();
+		//ExtractingNewlyCratedCustomerID();
 
-		webDriver.findElement(By.linkText("New Customer")).click();
+		webDriver.findElement(By.linkText("New Account")).click();
 		// switching to new window. Even though it doesn't need this window switching but 
 		// still expert says its better this way when you're landing on a new URL.
 		for (String handle : webDriver.getWindowHandles()) {
 			webDriver.switchTo().window(handle);
 		}
 
-		System.out.println("New Customer Account Creation Page");
+		System.out.println("Inside New Account Page");
 		Thread.sleep(2000);
 
 		try {
 
-			webDriver.findElement(By.xpath("//input[@name='name']")).clear();
-			webDriver.findElement(By.xpath("//input[@name='name']")).sendKeys("Test User");
-			webDriver.findElement(By.xpath("//tr[5]//td[2]//input[1]")).click();
-			webDriver.findElement(By.xpath("//input[@id='dob']")).clear();
-			webDriver.findElement(By.xpath("//input[@id='dob']")).sendKeys("03/20/1985");
-			webDriver.findElement(By.xpath("//textarea[@name='addr']")).clear();
-			webDriver.findElement(By.xpath("//textarea[@name='addr']")).sendKeys("Test test");
-			webDriver.findElement(By.xpath("//input[@name='city']")).clear();
-			webDriver.findElement(By.xpath("//input[@name='city']")).sendKeys("Dhaka");
-			webDriver.findElement(By.xpath("//input[@name='state']")).clear();
-			webDriver.findElement(By.xpath("//input[@name='state']")).sendKeys("Dhaka");
-			webDriver.findElement(By.xpath("//input[@name='pinno']")).clear();
-			webDriver.findElement(By.xpath("//input[@name='pinno']")).sendKeys("001207");
-			webDriver.findElement(By.xpath("//input[@name='telephoneno']")).clear();
-			webDriver.findElement(By.xpath("//input[@name='telephoneno']")).sendKeys("8809880880880");
-			webDriver.findElement(By.xpath("//input[@name='emailid']")).clear();
-			webDriver.findElement(By.xpath("//input[@name='emailid']")).sendKeys("testtest+07@gmail.com");
-			webDriver.findElement(By.xpath("//input[@name='password']")).clear();
-			webDriver.findElement(By.xpath("//input[@name='password']")).sendKeys("testtest");
-			webDriver.findElement(By.xpath("//input[@name='sub']")).click();
+			webDriver.findElement(By.xpath("//input[@name='cusid']")).clear();
+			webDriver.findElement(By.xpath("//input[@name='cusid']")).sendKeys(customerID);
+			new Select(webDriver.findElement(By.xpath("//select[@name='selaccount']"))).selectByIndex(1);
+			webDriver.findElement(By.xpath("//input[@name='inideposit']")).clear();
+			webDriver.findElement(By.xpath("//input[@name='inideposit']")).sendKeys(initialDeposit);
+			webDriver.findElement(By.xpath("//input[@name='button2']")).click();
 
 			// switching to new window. Even though it doesn't need this window switching but 
 			// still expert says its better this way when you're landing on a new URL.
 			for (String handle : webDriver.getWindowHandles()) {
 				webDriver.switchTo().window(handle);
 			}
-			System.out.println("New Customer Account Created");
 
-			String expectedMesssage = "Customer Registered Successfully!!!";
-			String accountConfirmation = webDriver.findElement(By.xpath("//p[@class='heading3']")).getText().toString();
-			System.out.println("Message Found : " +accountConfirmation);
-			assertEquals(accountConfirmation, expectedMesssage);
-			
-			String customerID = webDriver.findElement(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]"
-					+ "/table[1]/tbody[1]/tr[4]/td[2]")).getText().toString();
-			System.out.println("Customer ID : " +customerID);
-			ExtractedID = customerID;
-			
+			System.out.println("Account Created??");
 			Thread.sleep(2000);
 
-			TakingSnapshot();
+			String accountMessage = webDriver.findElement(By.xpath("//p[@class='heading3']")).getText().toString();
+			System.out.println("Message Shown After Completeion : " +accountMessage);
 
-			System.out.println("Verification Completed...");
+			String accountID = webDriver.findElement(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[1]"
+					+ "/td[1]/table[1]/tbody[1]/tr[4]/td[2]")).getText().toString();
+			System.out.println("Account ID : " +accountID);
+			
+			TakingSnapshot();
+			ReeadingDataFromImage(); // It's just an approach to get something specific rather than whole.
+			System.out.println("Verification Completed");
 			
 			webDriver.findElement(By.linkText("Continue")).click();
 			// switching to new window. Even though it doesn't need this window switching but 
@@ -118,17 +111,26 @@ public class LiveTestOnCreaingNewCustomerAccount {
 			for (String handle : webDriver.getWindowHandles()) {
 				webDriver.switchTo().window(handle);
 			}
-			System.out.println("New Customer Account Creation Completed.");
+			Thread.sleep(2000);
+			System.out.println("New Bank Account Creation Completed.");
+
 
 		} catch (Exception ex) {
 			// TODO: handle exception
 			ex.getStackTrace();
-			Alert alert = webDriver.switchTo().alert();
-
-			String alertMessage = alert.getText().toString();
-			alert.accept();
-			System.out.println("Alert Box Message Is:  " +alertMessage +"\n");
 		}
+
+	}
+
+	// Even though it doesn't work as per my expectation but, just keeping it for future reference. 
+	public static void ReeadingDataFromImage() throws IOException {
+		Ocr.setUp();
+		Ocr ocrReady = new Ocr();
+		//ocrReady.setUp();
+		ocrReady.startEngine("eng", Ocr.SPEED_FAST); // English OCR
+		extractID = ocrReady.recognize((RenderedImage) new File(filePath), ocrReady.RECOGNIZE_TYPE_ALL, ocrReady.OUTPUT_FORMAT_PLAINTEXT);
+		System.out.println(extractID);
+		ocrReady.stopEngine();
 
 	}
 
@@ -188,24 +190,25 @@ public class LiveTestOnCreaingNewCustomerAccount {
 		org.openqa.selenium.Dimension windowSize = webDriver.manage().window().getSize(); 
 		webDriver.navigate().refresh();
 		Thread.sleep(2000);
-		
+
 		// Scrolling Page Until EOF
 		((JavascriptExecutor) webDriver)
-	     .executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		
+		.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
 		webDriver.manage().window().maximize();
 		System.out.println("Taking ScreenShot");
 
-		TakesScreenshot newCustomerAccountScreenShot = ((TakesScreenshot)webDriver);
-		File ncacScreenShot = newCustomerAccountScreenShot.getScreenshotAs(OutputType.FILE);
-		String fileSaved = ("E:\\eclipse\\LiveTestCodeSamples\\Bank Demo\\NewCustomerAccountCreationScreenShot" +".png");
+		TakesScreenshot newBankAccountScreenShot = ((TakesScreenshot)webDriver);
+		File ncacScreenShot = newBankAccountScreenShot.getScreenshotAs(OutputType.FILE);
+		String fileSaved = ("E:\\eclipse\\LiveTestCodeSamples\\Bank Demo\\NewBankAccountCreationScreenShot" +".png");
 		FileUtils.copyFile(ncacScreenShot, new File(fileSaved));
 
 		System.out.println("Your Screenshot Is Saved At This Location : " +fileSaved);
 
 		webDriver.manage().window().setSize(windowSize);
-		System.out.println("Getting Out Of TakingSnapshot");
+		System.out.println("Done TakingSnapshot");
 
 	}
+
 
 }

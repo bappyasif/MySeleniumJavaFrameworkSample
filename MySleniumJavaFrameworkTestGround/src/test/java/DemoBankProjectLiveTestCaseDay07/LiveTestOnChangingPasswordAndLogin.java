@@ -1,4 +1,4 @@
-package DemoBankProjectLiveTestCase07;
+package DemoBankProjectLiveTestCaseDay07;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
