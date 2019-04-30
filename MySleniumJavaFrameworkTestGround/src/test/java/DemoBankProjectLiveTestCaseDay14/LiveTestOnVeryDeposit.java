@@ -23,7 +23,7 @@ public class LiveTestOnVeryDeposit {
 	static final String userID = "mngr190242";
 	static final String userPassword = "hCrEd^8";
 	static String accountID = "59372";
-	static String depositAmount = "7000";
+	static String depositAmount = "99997000";
 	static String depositDescription = "Deposit Amount";
 	
 	
