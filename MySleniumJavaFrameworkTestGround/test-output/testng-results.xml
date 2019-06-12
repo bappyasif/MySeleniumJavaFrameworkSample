@@ -1,373 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="0" total="4" passed="0">
+<testng-results skipped="0" failed="0" ignored="1" total="12" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="281103" started-at="2019-04-22T22:10:58Z" finished-at="2019-04-22T22:15:40Z">
+  <suite name="Default suite" duration-ms="70" started-at="2019-06-12T16:27:55Z" finished-at="2019-06-12T16:27:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="281103" started-at="2019-04-22T22:10:58Z" finished-at="2019-04-22T22:15:40Z">
-      <class name="DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG">
-        <test-method status="PASS" signature="launchingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="launchingBrowser" is-config="true" duration-ms="280460" started-at="2019-04-22T22:10:58Z" finished-at="2019-04-22T22:15:39Z">
+    <test name="Default test" duration-ms="70" started-at="2019-06-12T16:27:55Z" finished-at="2019-06-12T16:27:55Z">
+      <class name="tutorial.edureka.example.com.TestNGAttributes">
+        <test-method status="PASS" signature="TestCaseFunctionBB()[pri:0, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionBB" duration-ms="9" started-at="2019-06-12T16:27:55Z" finished-at="2019-06-12T16:27:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchingBrowser -->
-        <test-method status="FAIL" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="setData" duration-ms="26" started-at="2019-04-22T22:15:39Z" data-provider="getData" finished-at="2019-04-22T22:15:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mngr190242]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hArEdAq]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=73.0.3683.103)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORUK-MACTO', ip: '10.244.50.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\BappY\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50256}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: edd14ae546e06592853a1b0e1efc6d19
-*** Element info: {Using=xpath, value=//input[@name='uid']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=73.0.3683.103)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORUK-MACTO', ip: '10.244.50.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\BappY\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50256}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: edd14ae546e06592853a1b0e1efc6d19
-*** Element info: {Using=xpath, value=//input[@name='uid']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.CommencingLogin(LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.java:79)
-at DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.setData(LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.java:46)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        </test-method> <!-- TestCaseFunctionBB -->
+        <test-method status="PASS" signature="TestCaseFunctionD1()[pri:0, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionD1" duration-ms="7" started-at="2019-06-12T16:27:55Z" finished-at="2019-06-12T16:27:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="FAIL" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="setData" duration-ms="7" started-at="2019-04-22T22:15:39Z" data-provider="getData" finished-at="2019-04-22T22:15:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mngr1136]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hArEdAq]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=73.0.3683.103)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORUK-MACTO', ip: '10.244.50.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\BappY\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50256}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: edd14ae546e06592853a1b0e1efc6d19
-*** Element info: {Using=xpath, value=//input[@name='uid']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=73.0.3683.103)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORUK-MACTO', ip: '10.244.50.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\BappY\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50256}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: edd14ae546e06592853a1b0e1efc6d19
-*** Element info: {Using=xpath, value=//input[@name='uid']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.CommencingLogin(LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.java:79)
-at DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.setData(LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.java:46)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        </test-method> <!-- TestCaseFunctionD1 -->
+        <test-method status="PASS" signature="TestCaseFunctionA1()[pri:0, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionA1" duration-ms="0" started-at="2019-06-12T16:27:55Z" depends-on-methods="tutorial.edureka.example.com.TestNGAttributes.TestCaseFunctionBB" finished-at="2019-06-12T16:27:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="FAIL" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="setData" duration-ms="12" started-at="2019-04-22T22:15:39Z" data-provider="getData" finished-at="2019-04-22T22:15:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mngr190242]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hBr0dAq]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=73.0.3683.103)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORUK-MACTO', ip: '10.244.50.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\BappY\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50256}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: edd14ae546e06592853a1b0e1efc6d19
-*** Element info: {Using=xpath, value=//input[@name='uid']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=73.0.3683.103)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORUK-MACTO', ip: '10.244.50.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\BappY\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50256}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: edd14ae546e06592853a1b0e1efc6d19
-*** Element info: {Using=xpath, value=//input[@name='uid']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.CommencingLogin(LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.java:79)
-at DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.setData(LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.java:46)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        </test-method> <!-- TestCaseFunctionA1 -->
+        <test-method status="PASS" signature="TestCaseFunctionE1()[pri:0, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionE1" duration-ms="0" started-at="2019-06-12T16:27:55Z" depends-on-methods="tutorial.edureka.example.com.TestNGAttributes.TestCaseFunctionD1" finished-at="2019-06-12T16:27:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="FAIL" signature="setData(java.lang.String, java.lang.String)[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="setData" duration-ms="7" started-at="2019-04-22T22:15:39Z" data-provider="getData" finished-at="2019-04-22T22:15:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mngr1137]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hBr0d0q]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=73.0.3683.103)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORUK-MACTO', ip: '10.244.50.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\BappY\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50256}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: edd14ae546e06592853a1b0e1efc6d19
-*** Element info: {Using=xpath, value=//input[@name='uid']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=73.0.3683.103)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TORUK-MACTO', ip: '10.244.50.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\BappY\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50256}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: edd14ae546e06592853a1b0e1efc6d19
-*** Element info: {Using=xpath, value=//input[@name='uid']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.CommencingLogin(LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.java:79)
-at DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.setData(LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG.java:46)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        </test-method> <!-- TestCaseFunctionE1 -->
+        <test-method status="PASS" signature="TestCaseFunctionF1()[pri:0, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionF1" duration-ms="0" started-at="2019-06-12T16:27:55Z" depends-on-methods="tutorial.edureka.example.com.TestNGAttributes.TestCaseFunctionD1" finished-at="2019-06-12T16:27:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setData -->
-        <test-method status="PASS" signature="terminatingBrowser()[pri:0, instance:DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG@369f73a2]" name="terminatingBrowser" is-config="true" duration-ms="557" started-at="2019-04-22T22:15:39Z" finished-at="2019-04-22T22:15:40Z">
+        </test-method> <!-- TestCaseFunctionF1 -->
+        <test-method status="PASS" signature="TestCaseFunctionAA()[pri:2, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionAA" duration-ms="1" started-at="2019-06-12T16:27:55Z" finished-at="2019-06-12T16:27:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- terminatingBrowser -->
-      </class> <!-- DemoBankProjectLiveTestCaseDay06.LiveTestOnTakingScreenshotForVerifiedLoginPageUsingTestNG -->
+        </test-method> <!-- TestCaseFunctionAA -->
+        <test-method status="PASS" signature="TestCaseFunctionCC()[pri:4, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionCC" duration-ms="0" started-at="2019-06-12T16:27:55Z" finished-at="2019-06-12T16:27:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseFunctionCC -->
+        <test-method status="PASS" signature="TestCaseFunctionDD()[pri:6, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionDD" duration-ms="0" started-at="2019-06-12T16:27:55Z" finished-at="2019-06-12T16:27:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseFunctionDD -->
+        <test-method status="PASS" signature="TestCaseFunctionFF()[pri:65, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionFF" duration-ms="4" started-at="2019-06-12T16:27:55Z" finished-at="2019-06-12T16:27:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseFunctionFF -->
+        <test-method status="PASS" signature="TestCaseFunctionEE()[pri:74, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionEE" duration-ms="0" started-at="2019-06-12T16:27:55Z" finished-at="2019-06-12T16:27:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseFunctionEE -->
+        <test-method status="PASS" signature="TestCaseFunctionB1()[pri:0, instance:tutorial.edureka.example.com.TestNGAttributes@13a5fe33]" name="TestCaseFunctionB1" duration-ms="0" started-at="2019-06-12T16:27:55Z" depends-on-methods="tutorial.edureka.example.com.TestNGAttributes.TestCaseFunctionFF" finished-at="2019-06-12T16:27:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCaseFunctionB1 -->
+      </class> <!-- tutorial.edureka.example.com.TestNGAttributes -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
