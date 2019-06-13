@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel Suite" parallel="tests">
+
+	<test name="Parallel Testing For Assertion">
+
+		<classes>
+			<class name="tutorial.edureka.example.com.TestNGAssertions">
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="Parallel Testing For Annotations">
+
+		<classes>
+			<class name="tutorial.edureka.example.com.TestNGAnnotations">
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="Parallel Testing For Groupings">
+
+		<classes>
+			<class name="tutorial.edureka.example.com.GroupingTestNG" />
+			<class name="tutorial.edureka.example.com.AnotherGroupingUsingTestNG" />
+		</classes>
+
+	</test>
+
+</suite>

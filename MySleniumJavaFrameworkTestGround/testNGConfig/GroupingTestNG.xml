@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Grouping Suite">
+	<test name="TestNG Groupings">
+
+		<groups>
+			<run>
+				<include name="A"></include>
+				<include name="B"></include>
+				<include name="C"></include>
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="tutorial.edureka.example.com.AnotherGroupingUsingTestNG">
+			</class>
+			<class name="tutorial.edureka.example.com.GroupingTestNG">
+			</class>
+		</classes>
+	</test>
+</suite>
