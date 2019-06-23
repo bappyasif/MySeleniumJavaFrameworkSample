@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorial.edureka.example.com.TestNGAssertions">
+      <class name="tutorial.edureka.example.com.TestNGDataProviderExample">
         <methods>
-          <include name="InvokeBrowser"/>
-          <include name="RetrieveTitle"/>
-          <include name="TerminateBrowser"/>
+          <include name="ClosingBrowser"/>
         </methods>
-      </class> <!-- tutorial.edureka.example.com.TestNGAssertions -->
+      </class> <!-- tutorial.edureka.example.com.TestNGDataProviderExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

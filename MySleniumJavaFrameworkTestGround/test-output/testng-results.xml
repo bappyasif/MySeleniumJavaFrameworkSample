@@ -1,135 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="14" passed="14">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Parallel Suite" duration-ms="8892" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:46Z">
+  <suite name="Default suite" duration-ms="12848" started-at="2019-06-23T15:25:01Z" finished-at="2019-06-23T15:25:14Z">
     <groups>
-      <group name="A">
-        <method signature="AnotherGroupingUsingTestNG.Function1()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function1" class="tutorial.edureka.example.com.AnotherGroupingUsingTestNG"/>
-        <method signature="AnotherGroupingUsingTestNG.Function6()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function6" class="tutorial.edureka.example.com.AnotherGroupingUsingTestNG"/>
-        <method signature="GroupingTestNG.Function2()[pri:0, instance:tutorial.edureka.example.com.GroupingTestNG@68bbe345]" name="Function2" class="tutorial.edureka.example.com.GroupingTestNG"/>
-      </group> <!-- A -->
-      <group name="B">
-        <method signature="AnotherGroupingUsingTestNG.Function2()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function2" class="tutorial.edureka.example.com.AnotherGroupingUsingTestNG"/>
-        <method signature="AnotherGroupingUsingTestNG.Function4()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function4" class="tutorial.edureka.example.com.AnotherGroupingUsingTestNG"/>
-        <method signature="GroupingTestNG.Function1()[pri:0, instance:tutorial.edureka.example.com.GroupingTestNG@68bbe345]" name="Function1" class="tutorial.edureka.example.com.GroupingTestNG"/>
-        <method signature="GroupingTestNG.Function3()[pri:0, instance:tutorial.edureka.example.com.GroupingTestNG@68bbe345]" name="Function3" class="tutorial.edureka.example.com.GroupingTestNG"/>
-      </group> <!-- B -->
-      <group name="C">
-        <method signature="AnotherGroupingUsingTestNG.Function3()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function3" class="tutorial.edureka.example.com.AnotherGroupingUsingTestNG"/>
-        <method signature="AnotherGroupingUsingTestNG.Function5()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function5" class="tutorial.edureka.example.com.AnotherGroupingUsingTestNG"/>
-        <method signature="GroupingTestNG.Function4()[pri:0, instance:tutorial.edureka.example.com.GroupingTestNG@68bbe345]" name="Function4" class="tutorial.edureka.example.com.GroupingTestNG"/>
-      </group> <!-- C -->
     </groups>
-    <test name="Parallel Testing For Groupings" duration-ms="51" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-      <class name="tutorial.edureka.example.com.AnotherGroupingUsingTestNG">
-        <test-method status="PASS" signature="Function1()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function1" duration-ms="6" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function1 -->
-        <test-method status="PASS" signature="Function3()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function3" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function3 -->
-        <test-method status="PASS" signature="Function2()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function2" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function2 -->
-        <test-method status="PASS" signature="Function4()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function4" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function4 -->
-        <test-method status="PASS" signature="Function5()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function5" duration-ms="1" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function5 -->
-        <test-method status="PASS" signature="Function6()[pri:0, instance:tutorial.edureka.example.com.AnotherGroupingUsingTestNG@30b8a058]" name="Function6" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function6 -->
-      </class> <!-- tutorial.edureka.example.com.AnotherGroupingUsingTestNG -->
-      <class name="tutorial.edureka.example.com.GroupingTestNG">
-        <test-method status="PASS" signature="Function1()[pri:0, instance:tutorial.edureka.example.com.GroupingTestNG@68bbe345]" name="Function1" duration-ms="10" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function1 -->
-        <test-method status="PASS" signature="Function2()[pri:0, instance:tutorial.edureka.example.com.GroupingTestNG@68bbe345]" name="Function2" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function2 -->
-        <test-method status="PASS" signature="Function3()[pri:0, instance:tutorial.edureka.example.com.GroupingTestNG@68bbe345]" name="Function3" duration-ms="4" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function3 -->
-        <test-method status="PASS" signature="Function4()[pri:0, instance:tutorial.edureka.example.com.GroupingTestNG@68bbe345]" name="Function4" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Function4 -->
-      </class> <!-- tutorial.edureka.example.com.GroupingTestNG -->
-    </test> <!-- Parallel Testing For Groupings -->
-    <test name="Parallel Testing For Annotations" duration-ms="34" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-      <class name="tutorial.edureka.example.com.TestNGAnnotations">
-        <test-method status="PASS" signature="BeforeAnyTestCase()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="BeforeAnyTestCase" is-config="true" duration-ms="10" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeAnyTestCase -->
-        <test-method status="PASS" signature="BeforeEveryTestCases()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="BeforeEveryTestCases" is-config="true" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeEveryTestCases -->
-        <test-method status="PASS" signature="TestCaseFunctionOne()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="TestCaseFunctionOne" duration-ms="10" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCaseFunctionOne -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="TestCaseFunctionTwo()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="TestCaseFunctionTwo" duration-ms="10" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCaseFunctionTwo -->
-        <test-method status="PASS" signature="AfetrEveryTestCases()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="AfetrEveryTestCases" is-config="true" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfetrEveryTestCases -->
-        <test-method status="PASS" signature="BeforeEveryTestCases()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="BeforeEveryTestCases" is-config="true" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeEveryTestCases -->
-        <test-method status="PASS" signature="AfetrEveryTestCases()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="AfetrEveryTestCases" is-config="true" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfetrEveryTestCases -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="AfterClass" is-config="true" duration-ms="4" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method status="PASS" signature="AfterAllTestCases()[pri:0, instance:tutorial.edureka.example.com.TestNGAnnotations@79be0360]" name="AfterAllTestCases" is-config="true" duration-ms="0" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterAllTestCases -->
-      </class> <!-- tutorial.edureka.example.com.TestNGAnnotations -->
-    </test> <!-- Parallel Testing For Annotations -->
-    <test name="Parallel Testing For Assertion" duration-ms="8892" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:46Z">
-      <class name="tutorial.edureka.example.com.TestNGAssertions">
-        <test-method status="PASS" signature="InvokeBrowser()[pri:0, instance:tutorial.edureka.example.com.TestNGAssertions@4b4523f8]" name="InvokeBrowser" is-config="true" duration-ms="8238" started-at="2019-06-13T15:49:37Z" finished-at="2019-06-13T15:49:45Z">
+    <test name="Default test" duration-ms="12848" started-at="2019-06-23T15:25:01Z" finished-at="2019-06-23T15:25:14Z">
+      <class name="tutorial.edureka.example.com.TestNGDataProviderExample">
+        <test-method status="PASS" signature="InvokeBrowser()[pri:0, instance:tutorial.edureka.example.com.TestNGDataProviderExample@731a74c]" name="InvokeBrowser" duration-ms="11356" started-at="2019-06-23T15:25:01Z" finished-at="2019-06-23T15:25:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvokeBrowser -->
-        <test-method status="PASS" signature="EqualityAssertion()[pri:0, instance:tutorial.edureka.example.com.TestNGAssertions@4b4523f8]" name="EqualityAssertion" duration-ms="4" started-at="2019-06-13T15:49:45Z" finished-at="2019-06-13T15:49:45Z">
+        <test-method status="PASS" signature="SetData(java.lang.String, java.lang.String)[pri:0, instance:tutorial.edureka.example.com.TestNGDataProviderExample@731a74c]" name="SetData" duration-ms="1" started-at="2019-06-23T15:25:12Z" data-provider="GetData" finished-at="2019-06-23T15:25:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user01]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[01pass]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EqualityAssertion -->
-        <test-method status="PASS" signature="RetrieveTitle()[pri:0, instance:tutorial.edureka.example.com.TestNGAssertions@4b4523f8]" name="RetrieveTitle" duration-ms="8" started-at="2019-06-13T15:49:45Z" finished-at="2019-06-13T15:49:45Z">
+        </test-method> <!-- SetData -->
+        <test-method status="PASS" signature="SetData(java.lang.String, java.lang.String)[pri:0, instance:tutorial.edureka.example.com.TestNGDataProviderExample@731a74c]" name="SetData" duration-ms="2" started-at="2019-06-23T15:25:12Z" data-provider="GetData" finished-at="2019-06-23T15:25:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user02]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[02pass]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RetrieveTitle -->
-        <test-method status="PASS" signature="TerminateBrowser()[pri:0, instance:tutorial.edureka.example.com.TestNGAssertions@4b4523f8]" name="TerminateBrowser" is-config="true" duration-ms="638" started-at="2019-06-13T15:49:45Z" finished-at="2019-06-13T15:49:46Z">
+        </test-method> <!-- SetData -->
+        <test-method status="PASS" signature="SetData(java.lang.String, java.lang.String)[pri:0, instance:tutorial.edureka.example.com.TestNGDataProviderExample@731a74c]" name="SetData" duration-ms="0" started-at="2019-06-23T15:25:12Z" data-provider="GetData" finished-at="2019-06-23T15:25:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user03]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[03pass]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TerminateBrowser -->
-      </class> <!-- tutorial.edureka.example.com.TestNGAssertions -->
-    </test> <!-- Parallel Testing For Assertion -->
-  </suite> <!-- Parallel Suite -->
+        </test-method> <!-- SetData -->
+        <test-method status="PASS" signature="DataDrivenTestFramework(java.lang.String, java.lang.String)[pri:1, instance:tutorial.edureka.example.com.TestNGDataProviderExample@731a74c]" name="DataDrivenTestFramework" duration-ms="403" started-at="2019-06-23T15:25:12Z" data-provider="testData" finished-at="2019-06-23T15:25:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[someuser@domain.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[01someuser]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DataDrivenTestFramework -->
+        <test-method status="PASS" signature="DataDrivenTestFramework(java.lang.String, java.lang.String)[pri:1, instance:tutorial.edureka.example.com.TestNGDataProviderExample@731a74c]" name="DataDrivenTestFramework" duration-ms="353" started-at="2019-06-23T15:25:13Z" data-provider="testData" finished-at="2019-06-23T15:25:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anotheruser@domain.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[02anotheruser]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DataDrivenTestFramework -->
+        <test-method status="PASS" signature="ClosingBrowser()[pri:0, instance:tutorial.edureka.example.com.TestNGDataProviderExample@731a74c]" name="ClosingBrowser" is-config="true" duration-ms="698" started-at="2019-06-23T15:25:13Z" finished-at="2019-06-23T15:25:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClosingBrowser -->
+      </class> <!-- tutorial.edureka.example.com.TestNGDataProviderExample -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
