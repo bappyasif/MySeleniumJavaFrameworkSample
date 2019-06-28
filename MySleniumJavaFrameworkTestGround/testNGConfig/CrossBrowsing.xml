@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="CrossBrowsing TestSuite" thread-count="3"
+	parallel="tests">
+
+	<test name="Chrome Browser">
+		<parameter name="Browser" value="CHROME" />
+		<classes>
+			<class
+				name="tutorial.edureka.example.com.CrossBrowserTestUsingTestNG">
+			</class>
+		</classes>
+	</test>
+
+	<!-- Internet Explorer Will Throw Exception Unless Its Permission Settings Are Set  -->
+	<test name="IE Browser">
+		<parameter name="Browser" value="ie" />
+		<classes>
+			<class
+				name="tutorial.edureka.example.com.CrossBrowserTestUsingTestNG">
+			</class>
+		</classes>
+	</test>
+
+    <!-- Edge Browser Will Close Your Current Running Window, So Make Sure You Handle It Carefully  -->
+	<test name="Edge Browser">
+		<parameter name="Browser" value="edge" />
+		<classes>
+			<class
+				name="tutorial.edureka.example.com.CrossBrowserTestUsingTestNG">
+			</class>
+		</classes>
+	</test>
+
+</suite>
