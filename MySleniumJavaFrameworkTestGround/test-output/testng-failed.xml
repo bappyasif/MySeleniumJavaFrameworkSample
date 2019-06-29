@@ -1,41 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [CrossBrowsing TestSuite]" parallel="tests">
-  <test thread-count="3" name="IE Browser(failed)" parallel="tests">
-    <parameter name="Browser" value="ie"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorial.edureka.example.com.CrossBrowserTestUsingTestNG">
+      <class name="tutorial.edureka.example.com.EventListnersTestCases">
         <methods>
-          <include name="ClosingBrowser"/>
           <include name="InvokeBrowser"/>
-          <include name="CrossBrowsing"/>
-          <include name="ChoosingBrowser"/>
-        </methods>
-      </class> <!-- tutorial.edureka.example.com.CrossBrowserTestUsingTestNG -->
-    </classes>
-  </test> <!-- IE Browser(failed) -->
-  <test thread-count="3" name="Chrome Browser(failed)" parallel="tests">
-    <parameter name="Browser" value="CHROME"/>
-    <classes>
-      <class name="tutorial.edureka.example.com.CrossBrowserTestUsingTestNG">
-        <methods>
           <include name="ClosingBrowser"/>
-          <include name="CrossBrowsing"/>
-          <include name="ChoosingBrowser"/>
+          <include name="FabricatedFunction"/>
         </methods>
-      </class> <!-- tutorial.edureka.example.com.CrossBrowserTestUsingTestNG -->
+      </class> <!-- tutorial.edureka.example.com.EventListnersTestCases -->
     </classes>
-  </test> <!-- Chrome Browser(failed) -->
-  <test thread-count="3" name="Edge Browser(failed)" parallel="tests">
-    <parameter name="Browser" value="edge"/>
-    <classes>
-      <class name="tutorial.edureka.example.com.CrossBrowserTestUsingTestNG">
-        <methods>
-          <include name="ClosingBrowser"/>
-          <include name="CrossBrowsing"/>
-          <include name="ChoosingBrowser"/>
-        </methods>
-      </class> <!-- tutorial.edureka.example.com.CrossBrowserTestUsingTestNG -->
-    </classes>
-  </test> <!-- Edge Browser(failed) -->
-</suite> <!-- Failed suite [CrossBrowsing TestSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
