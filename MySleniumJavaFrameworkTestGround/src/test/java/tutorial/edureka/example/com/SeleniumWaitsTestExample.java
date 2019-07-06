@@ -192,7 +192,7 @@ public class SeleniumWaitsTestExample {
 		WebElement contentFound = fluenWait.until(new Function<WebDriver, WebElement>() {
 
 			public WebElement apply(WebDriver webDriver) {
-				// TODO Auto-generated method stub
+				
 				return webDriver.findElement(By.xpath("//h4[text()='Hello World']"));
 			}
 		});
